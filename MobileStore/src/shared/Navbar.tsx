@@ -1,5 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { navbarlinks } from "../constants/links";
+import { HiOutlineSearch, HiOutlineShoppingBag } from "react-icons/hi";
+import { FaBarsStaggered } from "react-icons/fa6";
 
 export const Navbar = () => {
     return (
@@ -19,6 +21,29 @@ export const Navbar = () => {
                     </NavLink>
                 ))}
             </nav>
+            <div className="flex gap-5 items-center">
+                <button>
+                    <HiOutlineSearch size={25} />
+                </button>
+                <div className="relative">
+                    {/*User Nav */}
+                    <Link
+                        to="/account"
+                        className="border-2 border-slate-700 w-9 h-9 rounded-full grid place-items-center text-lg"
+                    >
+                        E
+                    </Link>
+                </div>
+                <button className="relative">
+                    <span className="absolute -bottom-2 -right-2 w-5 h-5 grid place-items-center bg-black text-white text-xs rounded-full">
+                        0
+                    </span>
+                    <HiOutlineShoppingBag size={25} />
+                </button>
+            </div>
+            <button className="md:hidden">
+                <FaBarsStaggered size={25} />
+            </button>
         </header>
     );
 };
