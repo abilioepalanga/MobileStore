@@ -2,11 +2,14 @@ import { Link, NavLink } from "react-router-dom";
 import { navbarlinks } from "../constants/links";
 import { HiOutlineSearch, HiOutlineShoppingBag } from "react-icons/hi";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { Logo } from "./Logo";
 
 export const Navbar = () => {
     return (
         <header className="bg-white py-4 flex items-center justify-between px-5 border-b border-slate-200 lg:px-12">
-            <nav>
+            <Logo />
+
+            <nav className="space-x-5 hidden md:flex">
                 {navbarlinks.map((link) => (
                     <NavLink
                         key={link.id}

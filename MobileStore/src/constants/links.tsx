@@ -1,7 +1,7 @@
 export const navbarlinks = [
     {
         id: 1,
-        title: "início",
+        title: "Início",
         href: "/",
     },
     {

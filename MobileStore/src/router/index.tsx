@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-//import { RootLayout } from "../layout/RootLayout";
+import { RootLayout } from "../layout/RootLayout";
 import { Navbar } from "../shared/Navbar";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        //element: <RootLayout />,
-        element: <Navbar />,
+        element: <RootLayout />,
+
         children: [
             {
                 path: "",
