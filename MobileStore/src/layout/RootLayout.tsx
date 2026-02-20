@@ -3,10 +3,11 @@ import { Navbar } from "../shared/Navbar";
 
 export const RootLayout = () => {
     return (
-        <div>
+        <div className="h-screen flex flex-col">
             <Navbar />
-
-            <Outlet />
+            <main className="container my-8 flex-1">
+                <Outlet />
+            </main>
             <div>Footer</div>
         </div>
     );
